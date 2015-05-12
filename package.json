@@ -1,5 +1,5 @@
 {
-  "name": "node-pg-prepare",
+  "name": "pg-prepare",
   "version": "1.0.0",
   "description": "PostgreSQL prepared statements via ES6 harmony Template Strings",
   "main": "index.js",
