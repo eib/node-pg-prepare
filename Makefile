@@ -6,7 +6,7 @@ default: test
 test: mocha-tests
 
 mocha-tests:
-	$(MOCHA) --require should --reporter $(MOCHA_REPORTER)
+	$(MOCHA) --reporter $(MOCHA_REPORTER)
 
 .PHONY: default test \
   mocha-tests

@@ -1,29 +1,30 @@
-var prepare = require('../lib/prepare');
+const prepare = require('../');
+const { expect } = require('chai');
 
 describe('prepare()', function () {
     describe('when there are no substitutions', function () {
         it('should return the whole string as the prepared query', function () {
-            var stmt = prepare`SELECT 1`;
-            stmt.query.should.eql('SELECT 1');
+            const stmt = prepare`SELECT 1`;
+            expect(stmt.text).to.equal('SELECT 1');
         });
-        it('should return an empty params array', function () {
-            var stmt = prepare`SELECT 1`;
-            stmt.params.should.eql([]);
+        it('should return an empty values array', function () {
+            const stmt = prepare`SELECT 1`;
+            expect(stmt.values).to.deep.equal([]);
         });
     });
 
     describe('when there are substitutions', function () {
         it('should return the index-parametrized query string', function () {
-            var firstName = 'Foo',
-                lastName = 'Bar',
-                stmt = prepare`SELECT ${firstName} AS first_name, ${lastName} AS last_name`;
-            stmt.query.should.eql('SELECT $1 AS first_name, $2 AS last_name');
+            const firstName = 'Foo';
+            const lastName = 'Bar';
+            const stmt = prepare`SELECT ${firstName} AS first_name, ${lastName} AS last_name`;
+            expect(stmt.text).to.equal('SELECT $1 AS first_name, $2 AS last_name');
         });
-        it('should return an ordered params array', function () {
-            var firstName = 'Foo',
-                lastName = 'Bar',
-                stmt = prepare`SELECT ${firstName} AS first_name, ${lastName} AS last_name`;
-            stmt.params.should.eql(['Foo', 'Bar']);
+        it('should return an ordered values array', function () {
+            const firstName = 'Foo';
+            const lastName = 'Bar';
+            const stmt = prepare`SELECT ${firstName} AS first_name, ${lastName} AS last_name`;
+            expect(stmt.values).to.deep.equal(['Foo', 'Bar']);
         });
     });
 });

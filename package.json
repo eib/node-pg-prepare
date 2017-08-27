@@ -1,6 +1,6 @@
 {
   "name": "pg-prepare",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "PostgreSQL prepared statements via ES6 harmony Template Strings",
   "main": "index.js",
   "directories": {
@@ -25,11 +25,13 @@
   "author": "Ethan Blackwelder <ethan@eblackwelder.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eib/node-stmt/issues"
+    "url": "https://github.com/eib/node-pg-prepare/issues"
   },
   "homepage": "https://github.com/eib/node-pg-prepare",
   "devDependencies": {
+    "chai": "^4.1.1",
     "mocha": "^2.2.4",
-    "should": "^6.0.1"
-  }
+    "pg": "^7.2.0"
+  },
+  "dependencies": {}
 }
