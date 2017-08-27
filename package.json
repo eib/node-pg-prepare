@@ -1,6 +1,6 @@
 {
   "name": "pg-prepare",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostgreSQL prepared statements via ES6 harmony Template Strings",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,13 @@
     "url": "https://github.com/eib/node-pg-prepare.git"
   },
   "keywords": [
-    "PostgreSQL",
-    "Prepared Statements",
-    "Template Strings"
+    "postgres",
+    "pg",
+    "postgre",
+    "prepare",
+    "statements",
+    "database",
+    "interpolation"
   ],
   "author": "Ethan Blackwelder <ethan@eblackwelder.com>",
   "license": "MIT",
