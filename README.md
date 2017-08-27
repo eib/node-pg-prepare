@@ -15,7 +15,9 @@ let result = await client.query(stmt);
 console.log('Result:', result.rows[0]); //{ first_name: 'Foo', last_name: 'Bar' }
 ```
 
-See also: [./demo/index.js](demo/index.js)
+See also:
+ * [./demo/index.js](demo/index.js)
+ * [MDN Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 
 ### License

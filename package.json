@@ -1,6 +1,6 @@
 {
   "name": "pg-prepare",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "PostgreSQL prepared statements via ES6 harmony Template Strings",
   "main": "index.js",
   "directories": {
